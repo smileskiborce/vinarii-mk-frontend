@@ -1,18 +1,21 @@
 <template>
-<default>
+
   <hero-section/>
-</default>
+  <custom-footer/>
 </template>
 
 <script>
-import Default from "../layouts/Default.vue";
-import HeroSection from "@/Components/index/HeroSection.vue";
+
 export default {
   name: "Index",
-  components: {HeroSection, Default},
 }
+</script>
+<script setup>
+
+import HeroSection from "../Components/index/HeroSection.vue";
+import DefaultLayout from "../layouts/DefaultLayout.vue";
+import CustomFooter from "../Components/layouts/CustomFooter.vue";
 </script>
 
 <style scoped>
-
 </style>

@@ -1,17 +1,17 @@
 <template>
-  <div>
+  <main>
     <custom-header/>
     <slot></slot>
     <custom-footer/>
-  </div>
+  </main>
 </template>
 
 <script>
-import CustomHeader from "../Components/layout/CustomHeader.vue";
-import CustomFooter from "../Components/layout/CustomFooter.vue";
+import CustomHeader from "../Components/layouts/CustomHeader.vue";
+import CustomFooter from "../Components/layouts/CustomFooter.vue";
 
 export default {
-  name: "Default",
+  name: "DefaultLayout",
   components: {CustomFooter, CustomHeader}
 }
 </script>
