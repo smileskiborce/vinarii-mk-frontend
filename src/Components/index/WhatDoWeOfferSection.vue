@@ -1,18 +1,17 @@
 <template>
   <section class=" pt-5 pb-4 mt-5">
-    <div class="d-flex flex-column justify-content-center text-white-50 text-center">
-      <h2 class="fw-lighter">WHAT DO WE OFFER</h2>
+    <div class="d-flex flex-column justify-content-center text-white-50 text-center mt-4">
+      <h2 class="fw-lighter -font-awesome">WHAT DO WE OFFER</h2>
       <hr/>
-      <div class=" justify-content-center mx-auto row ">
+      <div class=" justify-content-center mx-auto row mb-2 pt-3">
         <div class="col-4 " v-for="(offer, i) in offers" :key="i">
           <div class="pt-4">
             <img :src=offer.img>
           </div>
-          <div class="py-4 mt-2 ">
+          <div class="py-4 mt-2 mb-4">
             {{ offer.desc }}
           </div>
         </div>
-
       </div>
     </div>
   </section>

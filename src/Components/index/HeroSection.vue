@@ -11,7 +11,7 @@
     </div>
     <custom-header  />
     <div class="d-none d-lg-block position-absolute end-0 text-white-50 ">
-      <hr/>
+
       <div class="fw-lighter display-1 d-flex text-end pe-5 me-5 mt-5">
         WINERIES<br/>
         IN<br/>
