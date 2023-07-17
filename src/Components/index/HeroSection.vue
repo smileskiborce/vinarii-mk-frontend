@@ -1,4 +1,4 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
   <section class="max-width-1600px mx-auto h-100vh position-relative">
 
 
@@ -10,8 +10,16 @@
       />
     </div>
     <custom-header  />
-
-
+    <div class="d-none d-lg-block position-absolute end-0 text-white-50 ">
+      <hr/>
+      <div class="fw-lighter display-1 d-flex text-end pe-5 me-5 mt-5">
+        WINERIES<br/>
+        IN<br/>
+        MACEDONIA</div>
+    </div>
+    <div class="d-none d-lg-block position-absolute end-0 bottom-0 text-white-50 pe-5 me-5 mt-5">
+      <h2 class="fw-light">we introduce excellent<br/> collection of wines</h2>
+    </div>
   </section>
 </template>
 
@@ -55,4 +63,5 @@ export default {
     font-size: 1.25rem !important;
   }
 }
+
 </style>
