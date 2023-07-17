@@ -16,7 +16,8 @@ export default {
 
 import HeroSection from "../Components/index/HeroSection.vue";
 import CustomFooter from "../Components/layouts/CustomFooter.vue";
-import WhatDoWeOfferSection from "@/Components/index/WhatDoWeOfferSection.vue";
+import WhatDoWeOfferSection from "../Components/index/WhatDoWeOfferSection.vue";
+
 </script>
 
 <style scoped>

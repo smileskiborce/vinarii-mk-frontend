@@ -4,7 +4,7 @@
 
     <div class="position-absolute top-0  w-100 d-none d-lg-block">
       <img
-          src="../../assets/Images/hero-section/hero-background.svg"
+          src="../../assets/Images/hero-section/hero-background.jpg"
           alt="Background image for the section"
           class=" h-right"
       />
@@ -38,7 +38,7 @@ export default {
     width: 100%;
   }
   .h-100vh {
-    height: min(129vh, 1500px);
+    height: min(129vh, 1400px);
   }
 }
 
