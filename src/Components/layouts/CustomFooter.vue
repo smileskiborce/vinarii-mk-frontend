@@ -9,8 +9,8 @@
         </a>
       </div>
       <div class="container">
-        <div class="fs-5 d-flex flex-row justify-content-between">
-          <a v-for="(link, i) in menuItems" :key="i" class="text-decoration-none text-white-50" :href=link.link>{{link.item}}</a>
+        <div class="fs-5 d-flex flex-row justify-content-between" v-for="(link, i) in menuItems" :key="i">
+          <a class="text-decoration-none text-white-50" :href=link.link>{{link.item}}</a>
         </div>
       </div>
     </div>
