@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Wine",
+  name: "Winery",
 }
 </script>
 <script setup>
