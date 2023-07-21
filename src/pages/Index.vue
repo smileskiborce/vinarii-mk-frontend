@@ -5,7 +5,7 @@
     <h2 class="mt-5 fw-lighter text-center text-white-50">WINERIES</h2>
     <hr class="mb-5 text-white"/>
     <div v-for="(winery, i) in wineries" :key="i">
-      <wineries-section :class="[i !== wineries.length-1 ?'margin-100px':'' ]" :winery="winery"/>
+      <wineries-section :class="[i !== wineries.length-1 ?'margin-100px':'' ]" :winery="winery" :counter="i"/>
     </div>
     <div class="text-center text-white-50 my-5">
       <button class="btn btn-outline-light mb-5 w-25 fs-5">See all >></button>
@@ -25,7 +25,8 @@ export default {
 import HeroSection from "../Components/index/HeroSection.vue";
 import CustomFooter from "../Components/layouts/CustomFooter.vue";
 import WhatDoWeOfferSection from "../Components/index/WhatDoWeOfferSection.vue";
-import WineriesSection from "@/Components/WineriesSection.vue";
+import WineriesSection from "../Components/WineriesSection.vue";
+
 
 const wineries = [
   {

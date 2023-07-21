@@ -12,12 +12,12 @@
     <custom-header  />
     <div class="d-none d-lg-block position-absolute end-0 text-white-50 ">
 
-      <div class="fw-lighter display-1 d-flex text-end pe-5 me-5 mt-5">
+      <div class="fw-lighter fs-3rem d-flex text-end pe-5 me-5 mt-5">
         WINERIES<br/>
         IN<br/>
         MACEDONIA</div>
     </div>
-    <div class="d-none d-lg-block position-absolute end-0 bottom-0 text-white-50 pe-5 me-5 mt-5">
+    <div class="d-none d-lg-block position-absolute end-0 bottom-0 text-white-50 pe-5 me-5 mt-5 top-20">
       <h2 class="fw-light">we introduce excellent<br/> collection of wines</h2>
     </div>
   </section>
@@ -32,6 +32,10 @@ export default {
 </script>
 
 <style scoped>
+
+.top-20{
+  top:70%
+}
 
 @media (min-width: 991px) {
   .h-right {
