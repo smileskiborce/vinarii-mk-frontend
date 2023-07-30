@@ -8,7 +8,7 @@
       </button>
       <div class="collapse navbar-collapse text-white-50" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto fs-5">
-          <a class="nav-link text-white-50" aria-current="page" href="#">WINERIES</a>
+          <a class="nav-link text-white-50" aria-current="page" href="/winery">WINERIES</a>
           <a class="nav-link text-white-50" aria-current="page" href="#">MAP</a>
           <a class="nav-link text-white-50" aria-current="page" href="#">ABOUT US</a>
         </div>
