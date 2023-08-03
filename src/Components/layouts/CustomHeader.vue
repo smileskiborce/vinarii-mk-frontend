@@ -24,13 +24,6 @@ export default {
 </script>
 
 <style scoped>
-.nav-bg{
-  background-color: #17212A;
-}
-.bg-img{
-  background-image: url("../../assets/Images/hero-section/hero-background.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 </style>
