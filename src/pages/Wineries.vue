@@ -1,8 +1,6 @@
 <template>
 <main class="bg-primary">
-  <div >
-
-  </div>
+  FIEFJEFNWJF
 </main>
 </template>
 

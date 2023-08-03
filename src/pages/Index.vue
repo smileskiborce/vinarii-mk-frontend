@@ -8,8 +8,10 @@
       <wineries-section :class="[i !== wineries.length-1 ?'margin-100px':'' ]" :winery="winery" :counter="i"/>
     </div>
     <div class="text-center my-5">
-      <button class="btn btn-outline-light mb-5 w-25 fs-5 text-white bg-secondary">See all >></button>
+      <a class="btn btn-outline-light mb-5 w-25 fs-5 text-white bg-secondary" href="/wineries">See all >></a>
     </div>
+    <most-popular-wines/>
+    <about-us-section/>
     <custom-footer/>
   </main>
 </template>
@@ -26,6 +28,8 @@ import HeroSection from "../Components/index/HeroSection.vue";
 import CustomFooter from "../Components/layouts/CustomFooter.vue";
 import WhatDoWeOfferSection from "../Components/index/WhatDoWeOfferSection.vue";
 import WineriesSection from "../Components/WineriesSection.vue";
+import AboutUsSection from "@/Components/index/AboutUsSection.vue";
+import MostPopularWines from "@/Components/Wine/MostPopularWines.vue";
 
 
 const wineries = [

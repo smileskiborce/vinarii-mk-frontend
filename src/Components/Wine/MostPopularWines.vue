@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white py-5 container">
+  <div class="text-white pb-5 container">
     <h3 class="text-center">
       Wines
     </h3>

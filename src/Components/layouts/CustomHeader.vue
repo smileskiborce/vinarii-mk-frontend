@@ -9,7 +9,7 @@
       <div class="collapse navbar-collapse text-white-50" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto fs-5">
           <a class="nav-link text-white-50" aria-current="page" href="#wineries-section">WINERIES</a>
-          <a class="nav-link text-white-50" aria-current="page" href="#">ABOUT US</a>
+          <a class="nav-link text-white-50" aria-current="page" href="#about-us">ABOUT US</a>
         </div>
       </div>
     </div>

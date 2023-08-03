@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from '@/pages/Index.vue'
 import DefaultLayout from "../layouts/DefaultLayout.vue";
-import Winery from "../pages/Winery.vue";
-
+import Wineries from "@/pages/Wineries.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -14,9 +13,9 @@ const router = createRouter({
           layout:DefaultLayout
         }
     },{
-      path: '/winery',
-      name: 'Winery',
-      component: Winery,
+      path: '/wineries',
+      name: 'Wineries',
+      component: Wineries,
         meta:{
         }
     }
