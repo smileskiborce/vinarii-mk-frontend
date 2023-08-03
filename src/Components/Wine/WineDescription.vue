@@ -1,18 +1,14 @@
 <template>
   <div class="container">
-    <h2 class="text-center text-white font-monospace">WINARY I</h2>
+    <h2 class="text-center text-white font-monospace">WINERY I</h2>
     <div class="justify-content-center d-flex">
       <hr class="text-white" style="width: 200px;margin-top: -1px"/>
     </div>
     <div class="ratio-21x9 ratio text-center">
       <img src='/images/wine/wine.png' class="p-5"/>
     </div>
-    <div class="text-white font-inter">
-      <h3 class="font-inter pt-2 text-center">ABOUT US</h3>
-      <div class="justify-content-center d-flex">
-        <hr class="text-white" style="width: 200px; margin-top: -1px"/>
-      </div>
-      <div class="text-center px-5 my-2">
+    <div class="text-white font-inter px-5 mt-3 mb-5">
+      <div class="text-center">
         {{ text }}
       </div>
     </div>

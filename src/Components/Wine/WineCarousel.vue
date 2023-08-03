@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white py-3 container my-5">
+  <div class="text-white py-3 container">
     <carousel :items-to-show="3">
       <slide v-for="wine in wines" :key="slide">
         <div class="ratio ratio-4x3">

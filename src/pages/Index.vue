@@ -7,8 +7,8 @@
     <div v-for="(winery, i) in wineries" :key="i">
       <wineries-section :class="[i !== wineries.length-1 ?'margin-100px':'' ]" :winery="winery" :counter="i"/>
     </div>
-    <div class="text-center text-white-50 my-5">
-      <button class="btn btn-outline-light mb-5 w-25 fs-5">See all >></button>
+    <div class="text-center my-5">
+      <button class="btn btn-outline-light mb-5 w-25 fs-5 text-white bg-secondary">See all >></button>
     </div>
     <custom-footer/>
   </main>
