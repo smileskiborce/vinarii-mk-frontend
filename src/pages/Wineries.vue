@@ -7,7 +7,7 @@
       <hr class="text-white" style="width: 200px;margin-top: -1px"/>
     </div>
   </div>
-  <wineries-section/>
+  <wineries-section class="d-flex flex-column justify-content-center align-items-center"/>
   <custom-footer/>
 </main>
 </template>
