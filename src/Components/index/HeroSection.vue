@@ -1,7 +1,5 @@
 <template xmlns="http://www.w3.org/1999/html">
   <section class="max-width-1600px mx-auto h-100vh position-relative">
-
-
     <div class="position-absolute top-0  w-100 d-none d-lg-block">
       <img
           src="../../assets/Images/hero-section/hero-background.jpg"
@@ -10,14 +8,13 @@
       />
     </div>
     <custom-header  />
-    <div class="d-none d-lg-block position-absolute end-0 text-white-50 ">
-
-      <div class="fw-lighter fs-3rem d-flex text-end pe-5 me-5 mt-5">
+    <div class="d-none d-lg-block position-absolute end-0 text-white-50" >
+      <div class="fw-lighter fs-3rem d-flex text-end pe-5 me-5 mt-5 animate__animated animate__slideInRight" >
         WINERIES<br/>
         IN<br/>
         MACEDONIA</div>
     </div>
-    <div class="d-none d-lg-block position-absolute end-0 bottom-0 text-white-50 pe-5 me-5 mt-5 top-20">
+    <div class="d-none d-lg-block position-absolute end-0 bottom-0 text-white-50 pe-5 me-5 mt-5 top-20 animate__animated animate__fadeInUp">
       <h2 class="fw-light">we introduce excellent<br/> collection of wines</h2>
     </div>
   </section>

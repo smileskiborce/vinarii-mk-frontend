@@ -1,6 +1,6 @@
 <template>
-  <section class="bg-primary" id="wineries-section">
-    <div class="py-5" v-for="(winery, i) in wineries" :key="i">
+  <section class="bg-primary animate__animated" id="wineries-section">
+    <div class="py-5" v-for="(winery, i) in wineries" :key="i" :class="[i%2===0 ? 'animate__animated animate__slideInRight':'animate__animated animate__slideInLeft']">
       <div class="row bg-secondary container p-4">
         <div class="col-lg-6 mb-5 mb-lg-none" :class="[i%2===0 ? 'order-0 text-center text-lg-start':'order-1 text-center text-lg-end']">
           <h3 class="fw-bold mb-5 ">{{ winery.name }}</h3>
@@ -13,8 +13,8 @@
           <p class="fs-4 mb-5 pb-5 fw-lighter">{{ winery.description }}</p>
           <div v-for="(wine, j) in winery.wines" :key="j"
                class="d-flex flex-column justify-content-center justify-content-lg-start text-lg-start">
-            <div class="gap-3 mb-3 mb-lg-5 ms-lg-5">
-              <img src="../assets/Images/hero-section/wine.svg"><span>{{ wine }}</span>
+            <div class=" mb-3 mb-lg-5 ms-lg-5 ">
+              <img src="../assets/Images/hero-section/wine.svg" class="me-3"><span>{{ wine }}</span>
             </div>
           </div>
           <button class="d-lg-none btn btn-outline-light mt-5" >View more >></button>
