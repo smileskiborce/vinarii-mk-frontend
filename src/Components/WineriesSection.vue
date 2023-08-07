@@ -8,7 +8,7 @@
         </div>
         <div class="col-lg-6 " :class="[i%2!==0 ? 'order-1 text-center text-lg-start':'order-0 text-center text-lg-end']">
           <div class="d-none d-lg-block " >
-            <button class="btn btn-outline-light mb-5 text-white bg-primary">View more >></button>
+            <router-link class="btn btn-outline-light mb-5 text-white bg-primary" to="/winery">View more >></router-link>
           </div>
           <p class="fs-4 mb-5 pb-5 fw-lighter">{{ winery.description }}</p>
           <div v-for="(wine, j) in winery.wines" :key="j"
