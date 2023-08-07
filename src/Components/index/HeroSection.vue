@@ -9,12 +9,12 @@
     </div>
     <custom-header  />
     <div class="d-none d-lg-block position-absolute end-0 text-white-50" >
-      <div class="fw-lighter fs-3rem d-flex text-end pe-5 me-5 mt-5 animate__animated animate__slideInRight" >
+      <div class="fw-lighter fs-3rem d-flex text-end pe-5 me-5 mt-5" >
         WINERIES<br/>
         IN<br/>
         MACEDONIA</div>
     </div>
-    <div class="d-none d-lg-block position-absolute end-0 bottom-0 text-white-50 pe-5 me-5 mt-5 top-20 animate__animated animate__fadeInUp">
+    <div class="d-none d-lg-block position-absolute end-0 bottom-0 text-white-50 pe-5 me-5 mt-5 top-20">
       <h2 class="fw-light">we introduce excellent<br/> collection of wines</h2>
     </div>
   </section>

@@ -4,7 +4,7 @@
     <what-do-we-offer-section/>
     <h2 class="mt-5 fw-lighter text-center text-white-50">WINERIES</h2>
     <hr class="mb-5 text-white"/>
-    <wineries-section class="d-flex flex-column justify-content-center align-items-center"/>
+    <wineries-section class="d-flex flex-column  align-items-center"/>
     <div class="text-center my-5">
       <a class="btn btn-outline-light mb-5 w-25 fs-5 text-white bg-secondary" href="/wineries">See all >></a>
     </div>
