@@ -1,6 +1,6 @@
 <template>
   <main>
-
+    <carousel-section />
   </main>
 </template>
 
@@ -14,6 +14,7 @@ export default {
 
 
 import CustomHeader from "../Components/layouts/CustomHeader.vue";
+import CarouselSection from "../Components/Homepage/CarouselSection.vue";
 </script>
 
 <style scoped>
