@@ -1,5 +1,5 @@
 <template>
-  <div class="py-5 text-white bg-bordo d-flex flex-column align-items-center">
+  <div class="bg-primary py-5 text-white d-flex flex-column align-items-center">
     <div>
       <h4 class="fw-lighter text-center">CONNECT WITH US</h4>
       <hr class="mb-4">
@@ -50,7 +50,5 @@ const menuItems = [
 ]
 </script>
 <style scoped>
-.bg-bordo{
-  background-color: #800020;
-}
+
 </style>
