@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Index from "../pages/Index.vue";
-import DefaultLayout from "../layouts/DefaultLayout.vue";
+import Index from "../Pages/Index.vue";
+import DefaultLayout from "../Layouts/DefaultLayout.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [

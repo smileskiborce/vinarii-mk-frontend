@@ -1,8 +1,6 @@
 <template>
   <main>
-      <div class="text-dark">
-        <custom-header/>
-      </div>
+
   </main>
 </template>
 
