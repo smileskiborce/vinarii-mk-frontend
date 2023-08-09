@@ -1,3 +1,15 @@
-.text-bordo{
-  color: #800020;
+.max-width-1600px {
+  max-width: 1600px;
+}
+
+.font-inter{
+  font-family: Inter;
+}
+
+.fs-3rem{
+  font-size: 4rem;
+}
+
+.ratio-3x2 {
+  --bs-aspect-ratio: calc(2 / 3 * 100%);
 }
