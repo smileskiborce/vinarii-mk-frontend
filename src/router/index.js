@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Index from "../Pages/Index.vue";
 import DefaultLayout from "../Layouts/DefaultLayout.vue";
+import LandingPageWinery from "@/pages/LandingPageWinery.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -12,6 +14,14 @@ const router = createRouter({
           layout:DefaultLayout
         }
     },
+    {
+      path: '/winery',
+      name: 'Winery',
+      component: LandingPageWinery,
+      meta:{
+        layout:DefaultLayout
+      }
+    }
   ]
 })
 
