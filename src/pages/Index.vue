@@ -1,6 +1,8 @@
 <template>
   <main>
-
+      <div class="text-dark">
+        <custom-header/>
+      </div>
   </main>
 </template>
 
@@ -13,6 +15,7 @@ export default {
 <script setup>
 
 
+import CustomHeader from "../Components/layouts/CustomHeader.vue";
 </script>
 
 <style scoped>
