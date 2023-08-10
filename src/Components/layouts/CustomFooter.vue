@@ -1,7 +1,7 @@
 <template>
   <div class="bg-primary py-5 text-white d-flex flex-column align-items-center">
     <div>
-      <h4 class="fw-lighter text-center">CONNECT WITH US</h4>
+      <h4 class="fw-bold text-center pb-2">CONNECT WITH US</h4>
       <hr class="mb-4">
       <div class="d-flex flex-row justify-content-between px-4 mb-4">
         <a v-for="(media, i) in socialMedia" :key="i" :href="media.link">
