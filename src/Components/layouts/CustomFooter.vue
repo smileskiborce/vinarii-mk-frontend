@@ -2,9 +2,9 @@
   <div class="bg-primary pt-5 text-white">
     <div class="container">
       <div class="row mb-4">
-        <div class="col-md-4 d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
-          <h4 class="fw-lighter mb-3">CONTACT US</h4>
-          <div class="d-flex gap-3 mb-2 align-items-center" v-for="(contact, i) in contactInfo" :key="i">
+        <div class="col-md-4 d-flex flex-column mx-auto align-items-md-start mb-4 mb-md-0">
+          <h4 class="fw-lighter mb-3 text-center text-md-start">CONTACT US</h4>
+          <div class="d-flex gap-3 mb-2 ms-5 ms-md-0 align-items-start " v-for="(contact, i) in contactInfo" :key="i">
             <i :class=contact.icon aria-hidden="true"></i>
             <span>{{ contact.text }}</span>
           </div>

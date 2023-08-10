@@ -6,7 +6,6 @@
     <div class="row d-flex flex-column justify-content-center">
       <winery-card/>
     </div>
-
   </main>
 </template>
 
