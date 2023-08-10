@@ -2,17 +2,15 @@
   <div class="container">
     <div class="row mx-auto justify-content-center">
       <div class="col-md-5 col-xxl-4 mb-5 d-flex flex-column align-items-center" v-for="(winery, i) in wineries" :key="i">
-        <div class="card rounded-2 rounded" style="width: 25rem;">
-          <div class="ratio ratio-3x2">
-            <img class="card-img-top rounded-0 ratio " :src="winery.img" alt="Card image cap">
-          </div>
+        <a class="card rounded-0 shadow text-decoration-none zoom-effect" style="width: 25rem;" href="/winery">
+          <img class="card-img-top rounded-0 ratio ratio-3x2" :src="winery.img" alt="Card image cap">
+
           <div class="card-body bg-primary text-white text-center px-4">
             <h5 class="card-title">{{ winery.name }}</h5>
             <hr/>
             <p class="card-text">{{ winery.description }}</p>
-            <button :href="winery.link" class="btn  btn-outline-light fw-bold px-4">Повеќе</button>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -83,5 +81,11 @@ const wineries = [
 ]
 </script>
 <style scoped>
+.zoom-effect {
+  transition: transform 0.3s ease-in-out; /* Adjust the transition duration as needed */
+}
 
+.card:hover {
+  transform: scale(1.05); /* Adjust the scaling factor to control the zoom level */
+}
 </style>
