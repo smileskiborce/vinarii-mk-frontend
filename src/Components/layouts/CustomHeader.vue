@@ -12,7 +12,7 @@
           <a class="nav-link text-dark" aria-current="page" href="/about-us">ABOUT US</a>
         </div>
       </div>
-    </div>g
+    </div>
   </nav>
   <div class="bg-primary" style="height: 2px; color: #800020 "></div>
 </section>
