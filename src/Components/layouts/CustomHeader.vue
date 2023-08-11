@@ -9,10 +9,10 @@
       <div class="collapse navbar-collapse " id="navbar">
         <div class="navbar-nav ms-lg-auto text-center fs-5 nav-item" >
           <a class="nav-link text-dark" aria-current="page" href="#wineries-section">WINERIES</a>
-          <a class="nav-link text-dark" aria-current="page" href="#about-us">ABOUT US</a>
+          <a class="nav-link text-dark" aria-current="page" href="/about-us">ABOUT US</a>
         </div>
       </div>
-    </div>
+    </div>g
   </nav>
   <div class="bg-primary" style="height: 2px; color: #800020 "></div>
 </section>
