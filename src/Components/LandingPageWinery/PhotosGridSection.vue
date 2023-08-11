@@ -44,7 +44,7 @@ const wineries_imgs = [
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-.photo {
+.photo img{
   max-width: 100%;
   height: auto;
 }
