@@ -5,7 +5,7 @@ import LandingPageWinery from "../Pages/LandingPageWinery.vue"
 import Wineries from "../Pages/Wineries.vue"
 import AboutUs from "../Pages/About-us.vue";
 import ContactUs from "../Pages/ContactUs.vue";
-g
+
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
