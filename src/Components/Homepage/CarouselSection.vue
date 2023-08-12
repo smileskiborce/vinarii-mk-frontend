@@ -2,8 +2,7 @@
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner" style="height: 90vh">
       <div class="carousel-item active" v-for="image in images">
-        <img :src="image" class="d-block w-100 object-fit-fill" alt="...">\
-
+        <img :src="'src/assets/images/carousel/'+image.img" class="d-block w-100 object-fit-fill">
       </div>
 
     </div>
@@ -20,10 +19,18 @@
 
 <script setup>
 const images = [
-  '../../assets/images/carousel/vineyard1.jpg',
-  '../../assets/images/carousel/vineyard2.jpg',
-  '../../assets/images/carousel/vineyard3.jpg',
-  '../../assets/images/carousel/vineyard4.jpg',
+  {
+    img: 'vineyard1.jpg'
+  },
+  {
+    img: 'vineyard2.jpg'
+  },
+  {
+    img: 'vineyard3.jpg'
+  },
+  {
+    img: 'vineyard4.jpg'
+  },
 ]
 </script>
 
