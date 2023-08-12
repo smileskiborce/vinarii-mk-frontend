@@ -4,7 +4,7 @@
       <div class="row ">
         <div class="col-md-3  col-12 " >
           <div class="ratio ratio-8x8" >
-            <img src="src/assets/images/homepage/white_wine_glasses.png" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px">
+            <img src="../../assets/images/homepage/white_wine_glasses.png" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px">
           </div>
         </div>
         <div class="col-md-8  col-12 text-center">
