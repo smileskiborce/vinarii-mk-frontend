@@ -1,34 +1,22 @@
 <template>
   <div class="container">
-    <h3 class="text-center my-3">Name of Winery</h3>
+    <div class="cover-image-container">
+      <img class="cover-image responsive-image" src="../assets/images/carousel/vineyard1.jpg"/>
+    </div>
+    <div class="d-flex mt-4 top-row">
+      <img src="../assets/images/carousel/vineyard1.jpg" class="profile-image mx-3">
+      <h1 class="text-center mt-4">Name of Winery</h1>
+    </div>
     <div class="page my-3">
       <div class="left-column mx-2 mb-3">
         <div class="sticky-cards">
-          <div class="card my-3">
-            <div class="card-header">
-              За винаријата
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card my-3">
-            <div class="card-header">
-              Слики
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+          <about-winery-section/>
+          <photos-grid-section/>
         </div>
       </div>
       <div class="right-column mx-2">
         <div class="scroll-cards">
-          <div v-for="i in 5" class="card my-3">
+          <div v-for="i in 10" class="card my-3">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="../assets/images/winery/winery.jpg" class="img-fluid rounded-start" alt="...">
@@ -42,12 +30,6 @@
               </div>
             </div>
           </div>
-<!--          <div v-for="card in cards" :key="card.id" class="card">-->
-<!--            &lt;!&ndash; Card content &ndash;&gt;-->
-<!--          </div>-->
-<!--          <div v-if="isLoading" class="loading-indicator">-->
-<!--            Loading...-->
-<!--          </div>-->
         </div>
       </div>
     </div>
@@ -55,63 +37,37 @@
 </template>
 
 <script setup>
-// export default {
-//   data() {
-//     return {
-//       cards: [], // Array to store cards
-//       isLoading: false
-//     };
-//   },
-//   methods: {
-//     loadMoreCards() {
-//       // Simulate loading more cards
-//       this.isLoading = true;
-//       // setTimeout(() => {
-//       //   const newCards = [...]; // Array of new cards
-//       //   this.cards.push(...newCards);
-//       //   this.isLoading = false;
-//       // }, 1000); // Adjust the delay as needed
-//     }
-//   },
-//   mounted() {
-//     this.loadMoreCards();
-//     window.addEventListener('scroll', this.handleScroll);
-//   },
-//   beforeUnmount() {
-//     window.removeEventListener('scroll', this.handleScroll);
-//   },
-//   watch: {
-//     cards() {
-//       // You might need to handle some logic when cards change
-//     }
-//   },
-//   handleScroll() {
-//     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
-//       // Adjust the value (100) as needed to trigger the loadMoreCards function
-//       this.loadMoreCards();
-//     }
-//   }
-// };
+import AboutWinerySection from "@/Components/LandingPageWinery/AboutWinerySection.vue";
+import PhotosGridSection from "@/Components/LandingPageWinery/PhotosGridSection.vue";
+
+</script>
+
+<script>
+export default {
+  name: "Winery",
+};
 
 </script>
 
 <style scoped>
 .page {
   display: flex;
+  flex-direction: column-reverse;
 }
 
 .left-column {
   flex: 1;
+  order: 2;
 }
 
 .sticky-cards {
   position: sticky;
-  top: 20px; /* Adjust as needed */
-  /* Styling for sticky cards */
+  top: 130px;
 }
 
 .right-column {
   flex: 2;
+  overflow-y: auto;
 }
 
 .scroll-cards {
@@ -125,4 +81,46 @@
 .loading-indicator {
   /* Styling for loading indicator */
 }
+
+.cover-image-container {
+  max-height: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cover-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.profile-image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.top-row {
+  width: 100%;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  .page {
+    flex-direction: row; /* On larger screens, revert to the original layout */
+  }
+
+  .left-column.above {
+    order: 1; /* On larger screens, restore the original order */
+  }
+
+  .right-column {
+    order: 2;
+  }
+}
+
 </style>

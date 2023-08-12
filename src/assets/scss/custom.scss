@@ -13,7 +13,13 @@
 .ratio-3x2 {
   --bs-aspect-ratio: calc(2 / 3 * 100%);
 }
-
 .ratio-2x1 {
   --bs-aspect-ratio: calc(1 / 2 * 100%);
+}
+.ratio-8x8{
+  --bs-aspect-ratio: calc(8 / 8 * 100%);
+}
+
+.ratio-7x8{
+  --bs-aspect-ratio: calc(10/ 8 * 100%);
 }
