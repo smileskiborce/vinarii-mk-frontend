@@ -20,10 +20,10 @@
 
 <script setup>
 const images = [
-  'src/assets/images/carousel/vineyard1.jpg',
-  'src/assets/images/carousel/vineyard2.jpg',
-  'src/assets/images/carousel/vineyard3.jpg',
-  'src/assets/images/carousel/vineyard4.jpg',
+  '../../assets/images/carousel/vineyard1.jpg',
+  '../../assets/images/carousel/vineyard2.jpg',
+  '../../assets/images/carousel/vineyard3.jpg',
+  '../../assets/images/carousel/vineyard4.jpg',
 ]
 </script>
 
