@@ -72,11 +72,11 @@ const menuItems = [
   },
   {
     item: 'ABOUT US',
-    link: '#'
+    link: '/about-us'
   },
   {
     item: 'CONTACT',
-    link: '#'
+    link: '/contact-us'
   },
 ]
 const contactInfo = [
