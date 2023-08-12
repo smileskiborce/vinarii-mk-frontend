@@ -11,7 +11,7 @@
     <h3 class="text-center text-primary">Thank you for being a part of our community.</h3>
     <div class="text-primary py-5 text-center">
       <h3>Cheers,</h3>
-      <h3>WINERY.MK team.</h3>
+      <h3>WINERIES.MK team.</h3>
     </div>
   </main>
 </template>
