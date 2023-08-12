@@ -19,7 +19,7 @@
         </div>
         <div class="col-3">
           <div class="ratio ratio-7x8">
-            <img src="src/assets/images/homepage/wines.png">
+            <img src="../../assets/images/homepage/wines.png">
           </div>
         </div>
       </div>
