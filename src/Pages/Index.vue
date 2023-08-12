@@ -1,6 +1,8 @@
 <template>
   <main>
     <carousel-section />
+    <share-your-love/>
+    <subscribe-us/>
   </main>
 </template>
 
@@ -15,6 +17,8 @@ export default {
 
 import CustomHeader from "../Components/layouts/CustomHeader.vue";
 import CarouselSection from "../Components/Homepage/CarouselSection.vue";
+import ShareYourLove from "../Components/Homepage/ShareYourLove.vue";
+import SubscribeUs from "../Components/Homepage/SubscribeUs.vue";
 </script>
 
 <style scoped>
