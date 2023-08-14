@@ -1,19 +1,15 @@
 <template>
-  <div class="container">
-    <div class="row mx-auto justify-content-center">
-      <div class="col-md-5 col-xxl-4 mb-5 d-flex flex-column align-items-center" v-for="(winery, i) in wineries" :key="i">
-        <a class="card rounded-0 shadow text-decoration-none zoom-effect" style="width: 25rem;" href="/winery">
-          <img class="card-img-top rounded-0 ratio ratio-3x2" :src="winery.img" alt="Card image cap">
+  <router-link :to="{name:'winery',params:{id : winery.id}}" class="text-decoration-none">
+    <div class="card rounded-0 shadow text-decoration-none zoom-effect" style="width: 25rem;" href="/winery">
+      <img class="card-img-top rounded-0 ratio ratio-3x2" alt="Card image cap">
 
-          <div class="card-body bg-primary text-white text-center px-4">
-            <h5 class="card-title">{{ winery.name }}</h5>
-            <hr/>
-            <p class="card-text">{{ winery.description }}</p>
-          </div>
-        </a>
+      <div class="card-body bg-primary text-white text-center px-4">
+        <h5 class="card-title">{{ winery.legal_name }}</h5>
+        <hr/>
+        <p class="card-text">{{ winery.description }}</p>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -23,62 +19,13 @@ export default {
 
 </script>
 <script setup>
-const wineries = [
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 2',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 3',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 4',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 5',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 6',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 7',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 8',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-  {
-    img: 'src/assets/images/winery/winery.jpg',
-    name: 'Winery 9',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    link: '#'
-  },
-]
+defineProps({
+  winery: {
+    default: null,
+    type: Object
+  }
+})
+
 </script>
 <style scoped>
 .zoom-effect {

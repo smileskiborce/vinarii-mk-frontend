@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    {{winery}}
     <div class="cover-image-container">
       <img class="cover-image responsive-image" src="../assets/images/carousel/vineyard1.jpg"/>
     </div>
@@ -24,7 +25,8 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">Wine 1</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                    additional content. This content is a little bit longer.</p>
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
               </div>
@@ -37,9 +39,24 @@
 </template>
 
 <script setup>
-import AboutWinerySection from "@/Components/LandingPageWinery/AboutWinerySection.vue";
-import PhotosGridSection from "@/Components/LandingPageWinery/PhotosGridSection.vue";
+import {useRoute} from "vue-router/dist/vue-router";
+import AboutWinerySection from "../Components/LandingPageWinery/AboutWinerySection.vue";
+import PhotosGridSection from "../Components/LandingPageWinery/PhotosGridSection.vue";
+import {onMounted, ref} from "vue";
+import axios from "axios";
+import {BACKEND_API} from "../../constant";
 
+const route = useRoute()
+const winery = ref(null)
+const loading = ref(true)
+
+onMounted(() => {
+  axios.get(BACKEND_API + 'wineries/' + route.params.id)
+      .then((response) => {
+        winery.value = response.data;
+        loading.value = false;
+      })
+})
 </script>
 
 <script>
