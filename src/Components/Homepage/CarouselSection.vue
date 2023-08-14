@@ -1,7 +1,7 @@
 <template>
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner" style="height: 90vh">
-      <div class="carousel-item active" v-for="image in images">
+    <div class="carousel-inner" >
+      <div class="carousel-item active ratio-16x9 ratio" v-for="image in images">
         <img :src="'src/assets/images/carousel/'+image.img" class="d-block w-100 object-fit-fill">
       </div>
 
