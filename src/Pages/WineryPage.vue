@@ -120,11 +120,11 @@ export default {
 
 @media (min-width: 768px) {
   .page {
-    flex-direction: row; /* On larger screens, revert to the original layout */
+    flex-direction: row;
   }
 
   .left-column.above {
-    order: 1; /* On larger screens, restore the original order */
+    order: 1;
   }
 
   .right-column {

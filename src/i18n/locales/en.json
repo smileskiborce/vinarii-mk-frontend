@@ -4,9 +4,9 @@
     "mk": "Macedonian"
   },
   "nav": {
-    "wineries": "wineries",
-    "contact": "contact",
-    "about-us": "about us"
+    "wineries": "WINERIES",
+    "contact": "CONTACT",
+    "about-us": "ABOUT US"
   },
   "winery": {
     "name": "Winery Name"

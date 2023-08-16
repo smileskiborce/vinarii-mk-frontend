@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import {ref} from 'vue';
+import {onMounted, ref} from 'vue';
 import {useI18n} from "vue-i18n";
 import Tr from "../i18n/translation"
 import mkImage from "../assets/images/flags/mk.png"
@@ -27,11 +27,19 @@ const languages = [
 ];
 const switchLanguage = async (event) => {
   await Tr.switchLanguage(event)
+  localStorage.setItem('selectedLanguage', event);
 }
 
 const getFlagImage = (languageCode) => {
   return languages.find((language) => language.code !== languageCode).image;
 };
+
+onMounted(() => {
+  const storedLanguage = localStorage.getItem('selectedLanguage');
+  if (storedLanguage) {
+    switchLanguage(storedLanguage);
+  }
+});
 
 </script>
 

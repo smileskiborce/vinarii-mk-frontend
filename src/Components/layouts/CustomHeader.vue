@@ -8,9 +8,9 @@
       </button>
       <div class="collapse navbar-collapse " id="navbar">
         <div class="navbar-nav ms-lg-auto text-center fs-5 nav-item" >
-          <a class="nav-link text-dark" aria-current="page" href="/wineries">WINERIES</a>
-          <a class="nav-link text-dark" aria-current="page" href="/contact-us">CONTACT</a>
-          <a class="nav-link text-dark" aria-current="page" href="/about-us">ABOUT US</a>
+          <a class="nav-link text-dark" aria-current="page" href="/wineries">{{ $t('nav.wineries') }}</a>
+          <a class="nav-link text-dark" aria-current="page" href="/contact-us">{{ $t('nav.contact') }}</a>
+          <a class="nav-link text-dark" aria-current="page" href="/about-us">{{ $t('nav.about-us') }}</a>
           <LanguageSwitcher class="justify-content-center align-items-center mx-2"></LanguageSwitcher>
         </div>
       </div>
