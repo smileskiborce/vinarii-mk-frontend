@@ -6,7 +6,7 @@
     </div>
     <div class="d-flex mt-4 top-row">
       <img src="../assets/images/carousel/vineyard1.jpg" class="profile-image mx-3">
-      <h1 class="text-center mt-4">Name of Winery</h1>
+      <h1 class="text-center mt-4">{{ $t('winery.name') }}</h1>
     </div>
     <div class="page my-3">
       <div class="left-column mx-2 mb-3">
@@ -89,14 +89,6 @@ export default {
 
 .scroll-cards {
   /* Styling for scrollable cards */
-}
-
-.card {
-  /* Styling for individual card */
-}
-
-.loading-indicator {
-  /* Styling for loading indicator */
 }
 
 .cover-image-container {
