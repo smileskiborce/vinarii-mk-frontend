@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "wineries": "wineries",
+    "contact": "contact",
+    "about-us": "about us"
+  },
+  "winery": {
+    "name": "Winery Name"
+  }
+}
