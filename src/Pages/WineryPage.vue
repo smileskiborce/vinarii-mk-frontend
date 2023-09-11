@@ -1,16 +1,21 @@
 <template>
+  <div class="cover-image-container" v-if="winery">
+    <img class="cover-image " :src="winery.cover_image"/>
+  </div>
   <div class="container">
     <div class="cover-image-container">
       <img class="cover-image responsive-image" src="../assets/images/carousel/vineyard1.jpg"/>
     </div>
     <div class="d-flex mt-4 top-row">
       <img src="../assets/images/carousel/vineyard1.jpg" class="profile-image mx-3">
+    <div class="d-flex mt-4 top-row" v-if="winery">
+      <img :src="winery.logo_image" class="profile-image mx-3">
       <h1 class="text-center mt-4">{{ $t('winery.name') }}</h1>
     </div>
     <div class="page my-3">
       <div class="left-column mx-2 mb-3">
         <div class="sticky-cards">
-          <about-winery-section/>
+          <about-winery-section :description="winery.description" :email="winery.email" :phone="winery.phone"/>
           <photos-grid-section/>
         </div>
       </div>
@@ -35,6 +40,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script setup>
@@ -52,7 +58,7 @@ const loading = ref(true)
 onMounted(() => {
   axios.get(BACKEND_API + 'wineries/' + route.params.id)
       .then((response) => {
-        winery.value = response.data;
+        winery.value = response.data.data;
         loading.value = false;
       })
 })
@@ -91,7 +97,7 @@ export default {
 }
 
 .cover-image-container {
-  max-height: 400px;
+  max-height: 500px;
   overflow: hidden;
   text-align: center;
 }
