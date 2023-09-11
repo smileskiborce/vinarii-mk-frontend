@@ -1,7 +1,7 @@
 <template>
-  <div class="px-5  text-primary text-center position-absolute top-25 my-5 start-50 translate-middle-x z-1">
+  <div class="px-5 d-none d-lg-block text-primary text-center position-absolute top-25 my-5 start-50 translate-middle-x z-1">
     <h1 class="fw-light mb-4 display-1">DISCOVER. TASTE. ENJOY.</h1>
-    <h3 class="">feel the scent of sun and happiness</h3>
+    <h3>feel the scent of sun and happiness</h3>
   </div>
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner " >
