@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    {{winery}}
     <div class="cover-image-container">
       <img class="cover-image responsive-image" src="../assets/images/carousel/vineyard1.jpg"/>
     </div>
