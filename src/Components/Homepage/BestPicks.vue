@@ -3,7 +3,6 @@
     <h1 class="fw-bold pb-2">
       Best picks
     </h1>
-
     <p class="fs-5">
       Get great value and seamless service with these brilliant wines, available direct <br/>
       from Wineries.mk and a selection of our best merchant partners
