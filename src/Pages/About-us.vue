@@ -3,7 +3,7 @@
     <h1 class="text-center text-primary">ABOUT US</h1>
     <title-text-section :title="TitleText[0].title" :text="TitleText[0].text"/>
     <div class="col-8 ratio ratio-2x1">
-      <img src="src/assets/images/carousel/vineyard4.jpg">
+      <img src="src/assets/images/carousel/vineyard2.jpg">
     </div>
     <title-text-section :title="TitleText[1].title" :text="TitleText[1].text"/>
     <what-we-offer-section/>
