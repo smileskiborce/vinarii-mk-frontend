@@ -15,7 +15,7 @@
       </div>
     </div>
   </nav>
-  <div class="bg-primary" style="height: 2px; color: #800020 "></div>
+  <div class="bg-primary" style="height: 0.5px; color: #800020 "></div>
 </section>
 </template>
 

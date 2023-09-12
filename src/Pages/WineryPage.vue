@@ -16,36 +16,9 @@
         </div>
       </div>
       <div class="right-column mx-2">
-        <div class="scroll-cards" v-if="wines">
-          <div v-for="(wine, i) in wines" class="card my-3">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img :src="wine.image" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body ms-3">
-                  <h2 class="card-title text-primary">{{ wine.name }}</h2>
-                  <hr/>
-                  <p class="card-text fs-5">{{ wine.description }}</p>
-                  <div class="row mt-5">
-                    <div class="col-6 col-sm-3 col-md-6 col-xl-3">
-                      <p class="card-text fs-6 fw-bold text-primary">WINE TYPE:</p>
-                      <p class="card-text fs-6 fw-bold text-primary">YEAR:</p>
-                      <p class="card-text fs-6 fw-bold text-primary">ALCOHOL:</p>
-                      <p class="card-text fs-6 fw-bold text-primary">COUNTRY:</p>
-                    </div>
-                    <div class="col-6 col-sm-3 col-md-6 col-xl-3">
-                      <p class="card-text fs-6"> {{ wine.wine_type_name }} </p>
-                      <p class="card-text fs-6"> {{ wine.vintage }} </p>
-                      <p class="card-text fs-6"> {{ wine.alcohol_content }} </p>
-                      <p class="card-text fs-6"> {{ wine.country_name }} </p>
-                    </div>
-                  </div>
-                  <hr/>
-                  <h2 class="card-text mt-4"><small class="text-muted">${{ wine.price }}</small></h2>
-                </div>
-              </div>
-            </div>
+        <div class="" v-if="wines">
+          <div v-for="(wine, i) in wines">
+            <wine-card :wine="wine" class="shadow-sm mb-5"/>
           </div>
         </div>
       </div>
@@ -57,6 +30,7 @@
 import {useRoute} from "vue-router/dist/vue-router";
 import AboutWinerySection from "../Components/LandingPageWinery/AboutWinerySection.vue";
 import PhotosGridSection from "../Components/LandingPageWinery/PhotosGridSection.vue";
+import WineCard from "../Components/WineCard.vue";
 import {onMounted, ref} from "vue";
 import axios from "axios";
 import {BACKEND_API} from "../../constant";
