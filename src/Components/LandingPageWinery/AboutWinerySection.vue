@@ -1,6 +1,6 @@
 <template>
   <div class="card my-3">
-    <div class="card-header">
+    <div class="card-header bg-primary text-white fs-4">
       About the winery
     </div>
     <div class="card-body">

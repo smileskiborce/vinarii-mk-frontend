@@ -3,14 +3,10 @@
     <img class="cover-image " :src="winery.cover_image"/>
   </div>
   <div class="container">
-    <div class="cover-image-container">
-      <img class="cover-image responsive-image" src="../assets/images/carousel/vineyard1.jpg"/>
-    </div>
-    <div class="d-flex mt-4 top-row">
-      <img src="../assets/images/carousel/vineyard1.jpg" class="profile-image mx-3">
+
     <div class="d-flex mt-4 top-row" v-if="winery">
       <img :src="winery.logo_image" class="profile-image mx-3">
-      <h1 class="text-center mt-4">{{ $t('winery.name') }}</h1>
+      <h1 class="text-center sticky-cards mt-4">{{ winery.legal_name }}</h1>
     </div>
     <div class="page my-3">
       <div class="left-column mx-2 mb-3">
@@ -20,18 +16,33 @@
         </div>
       </div>
       <div class="right-column mx-2">
-        <div class="scroll-cards">
-          <div v-for="i in 10" class="card my-3">
+        <div class="scroll-cards" v-if="wines">
+          <div v-for="(wine, i) in wines" class="card my-3">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="../assets/images/winery/winery.jpg" class="img-fluid rounded-start" alt="...">
+                <img :src="wine.image" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Wine 1</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="card-body ms-3">
+                  <h2 class="card-title text-primary">{{ wine.name }}</h2>
+                  <hr/>
+                  <p class="card-text fs-5">{{ wine.description }}</p>
+                  <div class="row mt-5">
+                    <div class="col-6 col-sm-3 col-md-6 col-xl-3">
+                      <p class="card-text fs-6 fw-bold text-primary">WINE TYPE:</p>
+                      <p class="card-text fs-6 fw-bold text-primary">YEAR:</p>
+                      <p class="card-text fs-6 fw-bold text-primary">ALCOHOL:</p>
+                      <p class="card-text fs-6 fw-bold text-primary">COUNTRY:</p>
+                    </div>
+                    <div class="col-6 col-sm-3 col-md-6 col-xl-3">
+                      <p class="card-text fs-6"> {{ wine.wine_type_name }} </p>
+                      <p class="card-text fs-6"> {{ wine.vintage }} </p>
+                      <p class="card-text fs-6"> {{ wine.alcohol_content }} </p>
+                      <p class="card-text fs-6"> {{ wine.country_name }} </p>
+                    </div>
+                  </div>
+                  <hr/>
+                  <h2 class="card-text mt-4"><small class="text-muted">${{ wine.price }}</small></h2>
                 </div>
               </div>
             </div>
@@ -39,7 +50,6 @@
         </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -53,12 +63,18 @@ import {BACKEND_API} from "../../constant";
 
 const route = useRoute()
 const winery = ref(null)
+const wines = ref(null)
 const loading = ref(true)
 
 onMounted(() => {
   axios.get(BACKEND_API + 'wineries/' + route.params.id)
       .then((response) => {
         winery.value = response.data.data;
+        loading.value = false;
+      })
+  axios.get(BACKEND_API + 'wineries/' + route.params.id + '/wines')
+      .then((response) => {
+        wines.value = response.data.data;
         loading.value = false;
       })
 })

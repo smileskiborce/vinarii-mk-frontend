@@ -1,12 +1,12 @@
 <template>
   <div class="card my-3">
-    <div class="card-header d-flex justify-content-between">
+    <div class="card-header d-flex justify-content-between fs-4 bg-primary text-white">
       <div class="">Photos</div>
       <div>
         <a class="text-primary text-decoration-none" href="#">See all photos</a>
       </div>
     </div>
-    <div class="card-body">
+    <div class="card-body">g
       <div class="nine-photos-card">
         <div class="photo-grid">
           <div v-for="(imageUrl, index) in wineries_imgs" :key="index" class="photo">
