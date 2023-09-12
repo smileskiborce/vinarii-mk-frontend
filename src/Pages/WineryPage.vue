@@ -17,8 +17,8 @@
       </div>
       <div class="right-column mx-2">
         <div class="" v-if="wines">
-          <div v-for="(wine, i) in wines">
-            <wine-card :wine="wine" class="shadow-sm mb-5"/>
+          <div v-for="(wine, i) in wines" class=" my-3 shadow-sm">
+            <wine-card :wine="wine"/>
           </div>
         </div>
       </div>

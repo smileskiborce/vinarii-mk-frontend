@@ -1,8 +1,8 @@
 <template>
   <div class="row g-0 mb-5">
-    <div class="col-md-3 bg-dark">
-      <div class="col-12">
-        <img :src="wine.image" class="img-fluid" alt="...">
+    <div class="col-md-3">
+      <div class="col-12 text-center">
+        <img :src="wine.image" style="height: 320px" class="img-fluid" alt="...">
       </div>
     </div>
     <div class="col-md-8 ps-2">
