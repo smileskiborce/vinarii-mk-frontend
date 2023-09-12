@@ -3,7 +3,11 @@
     <img class="cover-image " :src="winery.cover_image"/>
   </div>
   <div class="container">
-
+    <div class="cover-image-container">
+      <img class="cover-image responsive-image" src="../assets/images/carousel/vineyard1.jpg"/>
+    </div>
+    <div class="d-flex mt-4 top-row">
+      <img src="../assets/images/carousel/vineyard1.jpg" class="profile-image mx-3">
     <div class="d-flex mt-4 top-row" v-if="winery">
       <img :src="winery.logo_image" class="profile-image mx-3">
       <h1 class="text-center mt-4">{{ $t('winery.name') }}</h1>
@@ -35,6 +39,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 

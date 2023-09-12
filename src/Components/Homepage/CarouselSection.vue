@@ -1,8 +1,12 @@
 <template>
+  <div class="px-5 d-none d-lg-block text-primary text-center position-absolute top-25 my-5 start-50 translate-middle-x z-1">
+    <h1 class="fw-light mb-4 display-1">DISCOVER. TASTE. ENJOY.</h1>
+    <h3>feel the scent of sun and happiness</h3>
+  </div>
   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner" >
-      <div class="carousel-item active ratio-16x9 ratio" v-for="image in images">
-        <img :src="'src/assets/images/carousel/'+image.img" class="d-block w-100 object-fit-fill">
+    <div class="carousel-inner " >
+      <div class="carousel-item active ratio-21x9 ratio  " v-for="image in images">
+        <img :src="'src/assets/images/carousel/'+image.img" class="d-block  w-100 object-fit-fill">
       </div>
 
     </div>
@@ -27,9 +31,6 @@ const images = [
   },
   {
     img: 'vineyard3.jpg'
-  },
-  {
-    img: 'vineyard4.jpg'
   },
 ]
 </script>
