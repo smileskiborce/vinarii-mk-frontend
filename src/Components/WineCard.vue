@@ -23,12 +23,10 @@
             <p class="card-text"> {{ wine.country_name }} </p>
           </div>
           <div class="col-xl-3 col-12 text-center mb-4 mb-md-0">
-           <span class="fs-1">4.5</span><br/>
-            <i class="fa fa-star text-primary"></i>
-            <i class="fa fa-star text-primary"></i>
-            <i class="fa fa-star text-primary"></i>
-            <i class="fa fa-start ext-primary "></i>
-            <i class="fa fa-star-half-empty text-primary"></i>
+           <span class="fs-1">{{wine.rating}}</span><br/>
+
+            <i v-for="star in Math.floor(wine.rating)" class="fa fa-star text-primary"></i>
+            <i v-if="wine.rating % 1 > 0" class="fa fa-star-half-empty text-primary"></i>
             <span class="text-nowrap">1242 ratings</span>
             <div class="mt-2 text-center">
               <button class="btn btn-success px-5 fw-semibold rounded-5 text-nowrap text-center">{{wine.price}} ден.</button>
@@ -44,7 +42,7 @@
     <div class="row">
       <div class="col-2">
         <button class="rounded-4 btn btn-sm fw-bold fs-6 text-nowrap" style="background-color: rgba(241,241,156,0.51); color: #eaa40b">
-          <i class="fa fa-star"></i> 4.5
+          <i class="fa fa-star"></i> {{wine.rating}}
         </button>
       </div>
    <div class="col-10">
