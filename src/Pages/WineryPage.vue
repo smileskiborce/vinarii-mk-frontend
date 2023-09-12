@@ -15,7 +15,7 @@
     <div class="page my-3">
       <div class="left-column mx-2 mb-3">
         <div class="sticky-cards">
-          <about-winery-section :description="winery.description" :email="winery.email" :phone="winery.phone"/>
+          <about-winery-section  v-if="winery" :description="winery.description" :email="winery.email" :phone="winery.phone"/>
           <photos-grid-section/>
         </div>
       </div>
