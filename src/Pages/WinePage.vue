@@ -1,9 +1,9 @@
 <template>
-  <div  style="background-color: #f7f3f0;">
+  <div  style="background-color: #f7f3f0;" class="background">
     <div class="container py-3">
       <div class="row py-5" v-if="wine">
-        <div class="col-4">
-          <img :src="wine.image" style="height: 500px">
+        <div class="col-12 col-xl-4 col-md-7 col-sm-12 mt-4 text-center contained height">
+          <img :src="wine.image" class="rounded-2">
         </div>
         <div class="col-md-4 col-12">
           <div class="mt-4">
@@ -22,13 +22,13 @@
               </div>
 
               <div class="row mt-4">
-                <div class="col-6 col-sm-3 col-md-6 col-xl-3">
+                <div class="col-6 col-sm-3 col-md-6 col-xl-4">
                   <p class="card-text fw-bold text-primary text-nowrap">WINE TYPE:</p>
                   <p class="card-text fw-bold text-primary">YEAR:</p>
                   <p class="card-text fw-bold text-primary">ALCOHOL:</p>
                   <p class="card-text fw-bold text-primary">COUNTRY:</p>
                 </div>
-                <div class="col-6 col-sm-3 col-md-6 col-xl-3">
+                <div class="col-6 col-sm-3 col-md-6 col-xl-7">
                   <p class="card-text"> {{ wine.wine_type_name }} </p>
                   <p class="card-text"> {{ wine.vintage }} </p>
                   <p class="card-text"> {{ wine.alcohol_content }} </p>
@@ -42,31 +42,22 @@
 
           </div>
         </div>
-        <div class="col-xl-4 col-12 pb-5">
-          <div class="mt-5 pt-2 ps-2" style="background-color: #333;color:#dba969">
+        <div class="col-xl-4 col-12 pb-5 ">
+          <div class="mt-4 pt-2 ps-2 rounded-top-2" style="background-color: #333;color:#dba969">
             <img class="align-self-center" src="../assets/images/wine/best_pick.jpg" height="60"> <span
               class="fs-4 ps-2">Best picks</span>
           </div>
-          <div class="bg-white p-4 rounded-3">
-
-
+          <div class="bg-white p-4 rounded-bottom-2">
             <div>
               <p class="fs-2 pt-2">{{ wine.price }} ден.</p>
               <p>Price is per bottle</p>
-            </div>
-
-            <div class="mt-4">
-              <i class="fa fa-car pe-3"></i>Estimated between Mon, Sep 18 and Thu, Sep 21
-            </div>
-            <div class="mt-4">
-              <i class="fa fa-map-marker pe-3"></i>vinarii.mk.com
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="mt-5 container mb-5" style="background-color: #f7f3f0;" v-if="wine">
+  <div class="mt-5 container mb-5" style="background-color: white;" v-if="wine">
     <div class=" text-center py-4" style="color:#c38e64;">
       <p class="fs-5">
         WINE DESCRIPTION
@@ -113,5 +104,15 @@ onMounted(() => {
 })
 </script>
 <style scoped>
+.background {
+  background: linear-gradient(to bottom, #800020, lightgoldenrodyellow);
+}
+.contained img {
+  height: 100%;
+  width: 100%;
+}
+.height {
+  height: 550px;
 
+}
 </style>

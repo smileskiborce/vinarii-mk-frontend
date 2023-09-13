@@ -19,30 +19,28 @@
     <carousel v-else :items-to-show="4" :breakpoints="breakpoints">
 
       <slide v-for="(wine,i) in bestWines.data" :key="i">
-        <router-link :to="{name:'wine',params:{id : wine.id}}" class="text-decoration-none">
-          <div class="card border-0 btn px-5 ps-md-0">
+        <router-link :to="{name:'wine',params:{id : wine.id}}" class="text-decoration-none mx-5 contained">
+          <div class="card border-0 btn px-5 ps-md-0 ">
             <div class="d-flex mt-4 justify-content-between">
               <div>
                 <img class="wine-card" style="height: 200px" :src="wine.image">
               </div>
-              <div class="align-self-center text-end ">
+              <div class="align-self-center text-end ms-3">
                 <div class="text-center text-primary">
                   Price:
                 </div>
                 <p class="rounded-3 bg-success text-white  rounded-4 px-md-2 py-1 fs-6 text-nowrap">{{ wine.price }}
                   ден.</p>
-
-
               </div>
             </div>
             <div class="text-start mt-2">
               <p class="fs-5">{{ wine.name }}</p>
               <h5>({{ wine.region }}) <br/>
                 {{ wine.vintage }} - {{ wine.country }}</h5>
-              <p>Country: {{ wine.country_name.slice(0, 20) }}</p>
+              <p>Country: {{ wine.country_name }}</p>
               <span>
-              {{ wine.description.toString().slice(0, 70) }}...
-            </span>
+                {{ wine.description.toString().slice(0, 70) }}...
+              </span>
             </div>
 
           </div>
@@ -83,16 +81,24 @@ const breakpoints = {
     itemsToShow: 1,
     snapAlign: 'center',
   },
-  500: {
+  700: {
     itemsToShow: 1,
     snapAlign: 'center',
   },
-  700: {
+  900: {
     itemsToShow: 1,
     snapAlign: 'center',
   },
   // 1024 and up
   1024: {
+    itemsToShow: 2,
+    snapAlign: 'start',
+  },
+  1200: {
+    itemsToShow: 3,
+    snapAlign: 'start',
+  },
+  1400: {
     itemsToShow: 4,
     snapAlign: 'start',
   },
@@ -100,6 +106,9 @@ const breakpoints = {
 </script>
 
 <style scoped>
+.contained {
+  height: 100%;
+}
 .wine-card:hover {
   transition: transform 1.1s;
   transform: scale(1.15);

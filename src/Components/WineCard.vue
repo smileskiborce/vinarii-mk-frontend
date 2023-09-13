@@ -1,6 +1,6 @@
 <template>
   <router-link :to="{name:'wine',params:{id : wine.id}}" class="text-decoration-none">
-    <div class="row g-0 mb-5">
+    <div class="row g-0 mb-5 gradient-border">
       <div class="col-md-3">
         <div class="col-12 text-center">
           <img :src="wine.image" style="height: 320px" class="img-fluid" alt="...">
@@ -24,14 +24,15 @@
               <p class="card-text"> {{ wine.country_name }} </p>
             </div>
             <div class="col-xl-3 col-12 text-center mb-4 mb-md-0">
-              <span class="fs-1">{{ wine.rating }}</span><br/>
-              <div class="text-nowrap">
-                <i v-for="star in Math.floor(wine.rating)" class="fa fa-star text-primary"></i>
-                <i v-if="wine.rating % 1 > 0" class="fa fa-star-half-empty text-primary"></i>
+              <div class="">
+                <span class="fs-1">{{ wine.rating }}</span><br/>
+                <div class="text-nowrap">
+                  <i v-for="star in Math.floor(wine.rating)" class="fa fa-star text-primary"></i>
+                  <i v-if="wine.rating % 1 > 0" class="fa fa-star-half-empty text-primary"></i>
+                </div>
+                <span class="text-nowrap">1242 ratings</span>
               </div>
-
-              <span class="text-nowrap">1242 ratings</span>
-              <div class="mt-2 text-center">
+              <div class="mt-2">
                 <button class="btn btn-success px-5 fw-semibold rounded-5 text-nowrap text-center">{{ wine.price }} ден.
                 </button>
               </div>
@@ -44,7 +45,7 @@
       <hr/>
 
       <div class="row">
-        <div class="col-2">
+        <div class="col-2 text-center align-items-center justify-content-center d-flex">
           <button class="rounded-4 btn btn-sm fw-bold fs-6 text-nowrap"
                   style="background-color: rgba(241,241,156,0.51); color: #eaa40b">
             <i class="fa fa-star"></i> {{ wine.rating }}
@@ -77,5 +78,11 @@ defineProps({
 </script>
 
 <style scoped>
-
+.gradient-border {
+  border: 10px solid transparent; /* Set a transparent border */
+  background-clip: padding-box; /* Ensure the gradient is within the border */
+  border-image: linear-gradient(to right, white, #800020); /* Replace with your desired gradient colors */
+  border-image-slice: 1; /* Make the entire border show the gradient */
+  border-radius: 2px;
+}
 </style>
