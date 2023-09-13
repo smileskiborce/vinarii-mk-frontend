@@ -1,12 +1,12 @@
 <template>
   <router-link :to="{name:'winery',params:{id : winery.id}}" class="text-decoration-none">
     <div class="card rounded-3 shadow text-decoration-none zoom-effect card-size"  href="/winery">
-      <img class="card-img-top ratio ratio-3x2" alt="Card image cap " height="250" :src="winery.cover_image">
+      <img class="card-img-top ratio ratio-3x2" alt="Card image cap " height="230" :src="winery.cover_image">
 
       <div class="card-body rounded-bottom-3 bg-primary text-white text-center px-4">
         <h5 class="card-title">{{ winery.legal_name }}</h5>
         <hr/>
-        <p class="card-text">{{ winery.description.slice(0, 300) }}</p>
+        <p class="card-text">{{ winery.description.slice(0, 68) }}</p>
       </div>
     </div>
   </router-link>
