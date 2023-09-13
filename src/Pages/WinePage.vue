@@ -7,7 +7,7 @@
           <div  v-if="loading"  class="lds-ripple">
           </div>
         </div>
-        <div class="col-md-4 col-12" v-if="wine">
+        <div class="col-lg-4 col-12" v-if="wine">
           <div class="mt-4">
             <div class="fs-4">{{ wine.region }}</div>
             <h1> {{ wine.name }}</h1>
@@ -46,26 +46,27 @@
         </div>
         <div  v-if="loading"  class="lds-ripple col-md-4 col-12">
         </div>
-        <div class="col-xl-4 col-12 pb-5" v-if="wine">
-          <div class="mt-5 pt-2 ps-2" style="background-color: #333;color:#dba969">
-            <img class="align-self-center" src="../assets/images/wine/best_pick.jpg" height="60"> <span
-              class="fs-4 ps-2">Best picks</span>
+        <div class="col-lg-4 col-12 " v-if="wine">
+          <div class="card shadow-sm border-0 mt-5">
+            <div class=" pt-2 ps-2 " style="background-color: #333;color:#dba969">
+              <img class="align-self-center" src="../assets/images/wine/best_pick.jpg" height="60"> <span
+                class="fs-4 ps-2">Best picks</span>
+            </div>
+            <div class="bg-white p-4 rounded-3">
+              <div>
+                <p class="fs-2 pt-2 fw-semibold">{{ wine.price }} ден.</p>
+                <p>Price is per bottle</p>
+              </div>
+
+              <div class="mt-4">
+                <i class="fa fa-car pe-3"></i>Estimated between Mon, Sep 18 and Thu, Sep 21
+              </div>
+              <div class="mt-4">
+                <i class="fa fa-map-marker pe-3"></i>vinarii.mk.com
+              </div>
+            </div>
           </div>
-          <div class="bg-white p-4 rounded-3">
 
-
-            <div>
-              <p class="fs-2 pt-2">{{ wine.price }} ден.</p>
-              <p>Price is per bottle</p>
-            </div>
-
-            <div class="mt-4">
-              <i class="fa fa-car pe-3"></i>Estimated between Mon, Sep 18 and Thu, Sep 21
-            </div>
-            <div class="mt-4">
-              <i class="fa fa-map-marker pe-3"></i>vinarii.mk.com
-            </div>
-          </div>
         </div>
         <div  v-if="loading"  class="col-xl-4 col-12 pb-5 lds-ripple">
           <div></div>

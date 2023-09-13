@@ -1,6 +1,6 @@
 <template>
   <router-link :to="{name:'wine',params:{id : wine.id}}" class="text-decoration-none">
-    <div class="row g-0 mb-5 gradient-border">
+    <div class="row g-0 mb-5 shadow-sm">
       <div class="col-md-3">
         <div class="col-12 text-center">
           <img :src="wine.image" style="height: 320px" class="img-fluid" alt="...">
@@ -33,7 +33,7 @@
                 <span class="text-nowrap">1242 ratings</span>
               </div>
               <div class="mt-2">
-                <button class="btn btn-success px-5 fw-semibold rounded-5 text-nowrap text-center">{{ wine.price }} ден.
+                <button class="btn btn-success px-4 fw-semibold rounded-5 text-nowrap text-center">{{ wine.price }} ден.
                 </button>
               </div>
             </div>
