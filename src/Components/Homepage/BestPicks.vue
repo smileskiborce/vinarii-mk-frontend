@@ -19,7 +19,7 @@
     <carousel v-else :items-to-show="4" :breakpoints="breakpoints">
 
       <slide v-for="(wine,i) in bestWines.data" :key="i">
-        <router-link :to="{name:'winery',params:{id : wine.winery_id}}" class="text-decoration-none" >
+        <router-link :to="{name:'wine',params:{id : wine.id}}" class="text-decoration-none" >
           <div class="card border-0 btn">
             <div class="d-flex mt-4 justify-content-between">
               <div>

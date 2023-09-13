@@ -5,6 +5,7 @@ import Wineries from "../Pages/Wineries.vue"
 import AboutUs from "../Pages/About-us.vue";
 import ContactUs from "../Pages/ContactUs.vue";
 import wineryPage from "../Pages/WineryPage.vue";
+import WinePage from "../Pages/WinePage.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.VITE_BASE_URL),
@@ -26,6 +27,14 @@ const router = createRouter({
             }
         },
         {
+            path: '/wines/:id',
+            name: 'wine',
+            component: WinePage,
+            meta: {
+                layout: DefaultLayout
+            }
+        },
+        {
             path: '/wineries',
             name: 'Wineries',
             component: Wineries,
@@ -39,6 +48,13 @@ const router = createRouter({
             component: AboutUs,
         },
         {
+            path: '/contact-us',
+            name: 'ContactUs',
+            component: ContactUs,
+            meta: {
+                layout: DefaultLayout
+            }
+        }, {
             path: '/contact-us',
             name: 'ContactUs',
             component: ContactUs,
