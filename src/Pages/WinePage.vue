@@ -1,7 +1,7 @@
 <template>
-  <div v-if="wine" style="background-color: #f7f3f0;">
+  <div  style="background-color: #f7f3f0;">
     <div class="container py-3">
-      <div class="row py-5">
+      <div class="row py-5" v-if="wine">
         <div class="col-4">
           <img :src="wine.image" style="height: 500px">
         </div>
@@ -73,7 +73,7 @@
       </div>
     </div>
   </div>
-  <div class="mt-5 container mb-5" style="background-color: #f7f3f0;">
+  <div class="mt-5 container mb-5" style="background-color: #f7f3f0;" v-if="wine">
     <div class=" text-center py-4" style="color:#c38e64;">
       <p class="fs-5">
         WINE DESCRIPTION

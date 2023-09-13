@@ -19,24 +19,29 @@
     <carousel v-else :items-to-show="4" :breakpoints="breakpoints">
 
       <slide v-for="(wine,i) in bestWines.data" :key="i">
-        <router-link :to="{name:'wine',params:{id : wine.id}}" class="text-decoration-none" >
-          <div class="card border-0 btn">
+        <router-link :to="{name:'wine',params:{id : wine.id}}" class="text-decoration-none">
+          <div class="card border-0 btn px-5 ps-md-0">
             <div class="d-flex mt-4 justify-content-between">
               <div>
-                <img class="wine-card" style="height: 34vh" :src="wine.image">
+                <img class="wine-card" style="height: 200px" :src="wine.image">
               </div>
               <div class="align-self-center text-end ">
-                <p class="rounded-3 bg-success text-white px-1 px-md-2 py-1 fs-6 text-nowrap me-lg-3">{{ wine.price }}
+                <div class="text-center text-primary">
+                  Price:
+                </div>
+                <p class="rounded-3 bg-success text-white  rounded-4 px-md-2 py-1 fs-6 text-nowrap">{{ wine.price }}
                   ден.</p>
+
+
               </div>
             </div>
             <div class="text-start mt-2">
               <p class="fs-5">{{ wine.name }}</p>
               <h5>({{ wine.region }}) <br/>
                 {{ wine.vintage }} - {{ wine.country }}</h5>
-              <span>Country: {{ wine.country_name }}</span><br/>
+              <p>Country: {{ wine.country_name.slice(0, 20) }}</p>
               <span>
-              {{ wine.description }}
+              {{ wine.description.toString().slice(0, 70) }}...
             </span>
             </div>
 
@@ -75,7 +80,7 @@ onMounted(() => {
 const breakpoints = {
   // 700px and up
   300: {
-    itemsToShow: 1.5,
+    itemsToShow: 1,
     snapAlign: 'center',
   },
   500: {
