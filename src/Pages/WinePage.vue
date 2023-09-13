@@ -1,11 +1,13 @@
 <template>
   <div  style="background-color: #f7f3f0;">
     <div class="container py-3">
-      <div class="row py-5" v-if="wine">
+      <div class="row py-5" >
         <div class="col-4">
-          <img :src="wine.image" style="height: 500px">
+          <img v-if="wine" :src="wine.image" style="height: 500px">
+          <div  v-if="loading"  class="lds-ripple">
+          </div>
         </div>
-        <div class="col-md-4 col-12">
+        <div class="col-md-4 col-12" v-if="wine">
           <div class="mt-4">
             <div class="fs-4">{{ wine.region }}</div>
             <h1> {{ wine.name }}</h1>
@@ -42,7 +44,9 @@
 
           </div>
         </div>
-        <div class="col-xl-4 col-12 pb-5">
+        <div  v-if="loading"  class="lds-ripple col-md-4 col-12">
+        </div>
+        <div class="col-xl-4 col-12 pb-5" v-if="wine">
           <div class="mt-5 pt-2 ps-2" style="background-color: #333;color:#dba969">
             <img class="align-self-center" src="../assets/images/wine/best_pick.jpg" height="60"> <span
               class="fs-4 ps-2">Best picks</span>
@@ -62,6 +66,10 @@
               <i class="fa fa-map-marker pe-3"></i>vinarii.mk.com
             </div>
           </div>
+        </div>
+        <div  v-if="loading"  class="col-xl-4 col-12 pb-5 lds-ripple">
+          <div></div>
+          <div></div>
         </div>
       </div>
     </div>
@@ -113,5 +121,53 @@ onMounted(() => {
 })
 </script>
 <style scoped>
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
 
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #c5bdbd;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
 </style>
