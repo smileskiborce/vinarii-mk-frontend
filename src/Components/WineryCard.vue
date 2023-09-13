@@ -6,7 +6,7 @@
       <div class="card-body rounded-bottom-3 bg-primary text-white text-center px-4">
         <h5 class="card-title">{{ winery.legal_name }}</h5>
         <hr/>
-        <p class="card-text">{{ winery.description }}</p>
+        <p class="card-text">{{ winery.description.slice(0, 300) }}</p>
       </div>
     </div>
   </router-link>
