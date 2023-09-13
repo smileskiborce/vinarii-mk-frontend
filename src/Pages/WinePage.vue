@@ -20,10 +20,7 @@
                   <p>21241 ratings</p>
                 </div>
               </div>
-              <div class="mt-3">
-                <i class="fa fa-shopping-cart">
-                </i> Add to cart
-              </div>
+
               <div class="row mt-4">
                 <div class="col-6 col-sm-3 col-md-6 col-xl-3">
                   <p class="card-text fw-bold text-primary text-nowrap">WINE TYPE:</p>
@@ -46,7 +43,7 @@
           </div>
         </div>
         <div class="col-xl-4 col-12 pb-5">
-          <div class="mt-5 pt-2" style="background-color: #333;color:#dba969">
+          <div class="mt-5 pt-2 ps-2" style="background-color: #333;color:#dba969">
             <img class="align-self-center" src="../assets/images/wine/best_pick.jpg" height="60"> <span
               class="fs-4 ps-2">Best picks</span>
           </div>
@@ -58,15 +55,11 @@
               <p>Price is per bottle</p>
             </div>
 
-            <button class="btn btn-success w-100 rounded-3 fw-semibold py-2 fs-5">
-              Add to cart
-            </button>
-
             <div class="mt-4">
               <i class="fa fa-car pe-3"></i>Estimated between Mon, Sep 18 and Thu, Sep 21
             </div>
             <div class="mt-4">
-              <i class="fa fa-map-marker pe-3"></i>Sold by vinarii.mk.com
+              <i class="fa fa-map-marker pe-3"></i>vinarii.mk.com
             </div>
           </div>
         </div>
